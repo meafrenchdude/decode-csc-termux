@@ -2,7 +2,7 @@
 
 Got bored of typing it in everytime so...
 
-The script just uses [OMC Decoder](https://github.com/soulr344/OMCDecoder) from [Soul Reaper](https://github.com/soulr344)
+The script uses [OMC Decoder](https://github.com/soulr344/OMCDecoder) from [Soul Reaper](https://github.com/soulr344)
 
 One liner:
 
