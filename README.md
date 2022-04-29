@@ -8,5 +8,5 @@ One liner:
 
 
 ```
-curl -so decode-csc.sh https://raw.githubusercontent.com/fredinj/decode-csc-termux/main/decode-csc.sh && chmod +x decode-csc.sh && su -c sh decode-csc.sh
+cd ~ && curl -so decode-csc.sh https://raw.githubusercontent.com/fredinj/decode-csc-termux/main/decode-csc.sh && chmod +x decode-csc.sh && su -c sh decode-csc.sh
 ```
