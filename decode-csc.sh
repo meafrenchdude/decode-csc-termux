@@ -13,6 +13,8 @@ mount -o rw,remount /dev/block/dm-0
 if [ ! -f "$BACKUP" ]; then
 echo -e "-- Making a Backup of cscfeature.xml --\n\n"
 cp /optics/configs/carriers/$REGION/conf/cscfeature.xml /optics/configs/carriers/$REGION/conf/cscfeature.xml.bak
+else
+echo -e "-- Backup Already Exists --\n\n"
 fi
 
 echo -e "-- Downloading OMC Decoder --\n\n"
