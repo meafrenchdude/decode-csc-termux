@@ -23,6 +23,7 @@ curl --no-progress-meter -Lo cscdecoder-aarch64 https://github.com/soulr344/OMCD
 echo -e "-- Decrypting --"
 
 ./cscdecoder-aarch64 -i /optics/configs/carriers/$REGION/conf/cscfeature.xml
+chmod 644 /optics/configs/carriers/$REGION/conf/cscfeature.xml
 
 echo -e "\n\n-- Cleaning --\n\n"
 
