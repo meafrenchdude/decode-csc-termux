@@ -9,7 +9,6 @@ echo -e "\n\n-- Mounting RW --\n\n"
 
 blockdev --setrw /dev/block/dm-0
 mount -o rw,remount /dev/block/dm-0
-mount -o rw,remount /
 
 if [ ! -f "$BACKUP" ]; then
 echo -e "-- Making a Backup of cscfeature.xml --\n\n"
