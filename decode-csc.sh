@@ -7,6 +7,8 @@ BACKUP=/optics/configs/carriers/$REGION/conf/cscfeature.xml.bak
 
 echo -e "\n\n-- Mounting RW --\n\n"
 
+blockdev --setrw /dev/block/dm-0
+mount -o rw,remount /dev/block/dm-0
 mount -o rw,remount /
 
 if [ ! -f "$BACKUP" ]; then
