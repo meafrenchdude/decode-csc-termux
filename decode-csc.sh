@@ -9,8 +9,8 @@ echo -e "\n\n-- Mounting RW --\n\n"
 
 mount -o rw,remount /optics
 
-if [ ! -f "$BACKUP" ]; then
 echo -e "-- Making a Backup of cscfeature.xml --\n\n"
+if [ ! -f "$BACKUP" ]; then
 cp /optics/configs/carriers/$REGION/conf/cscfeature.xml /optics/configs/carriers/$REGION/conf/cscfeature.xml.bak
 else
 echo -e "-- Backup Already Exists --\n\n"
