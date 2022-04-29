@@ -27,5 +27,6 @@ echo -e "-- Decrypting --"
 echo -e "\n\n-- Cleaning --\n\n"
 
 rm cscdecoder-aarch64
+rm decode-csc.sh
 
 echo -e "-- Done :) --\n\n"
