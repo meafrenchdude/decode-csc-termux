@@ -2,7 +2,7 @@
 
 clear
 
-REGION=`ls /optics/configs/carriers`
+REGION=`cat /efs/imei/mps_code.dat`
 BACKUP=/optics/configs/carriers/$REGION/conf/cscfeature.xml.bak
 
 echo -e "\n\n-- Mounting RW --\n\n"
