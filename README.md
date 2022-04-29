@@ -1,4 +1,4 @@
-# Decode Samsung's CSC Files Using Termux
+# Decode Samsung's cscfeature.xml Using Termux
 
 Got bored of typing it in everytime so...
 
