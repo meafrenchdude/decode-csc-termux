@@ -11,7 +11,7 @@ blockdev --setrw /dev/block/dm-0
 mount -o rw,remount /dev/block/dm-0
 mount -o rw,remount /
 
-if [ ! -f "$BACKUP ]"; then
+if [ ! -f "$BACKUP" ]; then
 echo -e "\n\n-- Making a Backup of cscfeature.xml --\n\n"
 cp /optics/configs/carriers/$REGION/conf/cscfeature.xml /optics/configs/carriers/$REGION/conf/cscfeature.xml.bak
 fi
