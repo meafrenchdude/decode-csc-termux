@@ -8,7 +8,6 @@ echo -e "\n\n Mounting RW"
 
 blockdev --setrw /dev/block/dm-0
 mount -o rw,remount /dev/block/dm-0
-mount -o rw,remount /
 
 echo -e "\n\n-- Making a Backup of cscfeature.xml --\n\n"
 
