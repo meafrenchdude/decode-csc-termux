@@ -24,6 +24,7 @@ echo -e "-- Decrypting --"
 
 ./cscdecoder-aarch64 -i /optics/configs/carriers/$REGION/conf/cscfeature.xml
 chmod 644 /optics/configs/carriers/$REGION/conf/cscfeature.xml
+chmod 644 /optics/configs/carriers/$REGION/conf/cscfeature.xml.bak
 
 echo -e "\n\n-- Cleaning --\n\n"
 
