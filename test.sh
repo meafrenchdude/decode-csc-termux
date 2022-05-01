@@ -5,25 +5,26 @@ clear
 REGION=`cat /efs/imei/mps_code.dat`
 ANDROID=`getprop ro.build.version.release`
 
-#if [ $ANDROID="A12" ]; then
-PATH="/optics/configs/carriers/$REGION/conf/system"
-#else
-#PATH="/optics/configs/carriers/$REGION/conf"
-#fi
+if (($ANDROID==12)); then
+PTH="/optics/configs/carriers/$REGION/conf/system"
+else
+PTH="/optics/configs/carriers/$REGION/conf"
+fi
 
-BACKUP=$PATH/cscfeature.xml.bak
+BACKUP=$PTH/cscfeature.xml.bak
 
-echo -e "\n\n-- Your android version is $ANDROID --"
-echo -e "\n\n$PATH"
+echo -e "\n\n-- You are on Android $ANDROID --"
+echo -e "\n\n$PTH"
 echo -e "\n\n-- Mounting RW --\n\n"
 
 mount -o rw,remount /optics
 
 echo -e "-- Making a Backup of cscfeature.xml --\n\n"
 if [ ! -f "$BACKUP" ]; then
-cp $PATH/cscfeature.xml $PATH/cscfeature.xml.bak
+cp $PTH/cscfeature.xml $PTH/cscfeature.xml.bak
 else
 echo -e "-- Backup Already Exists --\n\n"
+cp $PTH/cscfeature.xml.bak $PTH/cscfeature.xml
 fi
 
 echo -e "-- Downloading OMC Decoder --\n\n"
@@ -32,13 +33,13 @@ curl --no-progress-meter -Lo cscdecoder-aarch64 https://github.com/soulr344/OMCD
 
 echo -e "-- Decrypting --"
 
-./cscdecoder-aarch64 -i $PATH/cscfeature.xml
-chmod 644 $PATH/cscfeature.xml
-chmod 644 $PATH/cscfeature.xml.bak
+./cscdecoder-aarch64 -i $PTH/cscfeature.xml
+chmod 644 $PTH/cscfeature.xml
+chmod 644 $PTH/cscfeature.xml.bak
 
 echo -e "\n\n-- Cleaning --\n\n"
 
 rm cscdecoder-aarch64
-rm decode-csc.sh
+rm test.sh
 
 echo -e "-- Done :) --\n\n"
