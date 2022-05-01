@@ -14,7 +14,7 @@ fi
 BACKUP=$PTH/cscfeature.xml.bak
 
 echo -e "\n\n-- You are on Android $ANDROID --"
-echo -e "\n\n$PTH"
+
 echo -e "\n\n-- Mounting RW --\n\n"
 
 mount -o rw,remount /optics
