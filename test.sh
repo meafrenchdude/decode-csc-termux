@@ -13,7 +13,7 @@ fi
 
 BACKUP=$PTH/cscfeature.xml.bak
 
-#checking if it's already decryted
+#Checking if it's already decryted
 if ((`file $PTH/cscfeature.xml`=="data")); then
 
 
@@ -28,7 +28,6 @@ if [ ! -f "$BACKUP" ]; then
 cp $PTH/cscfeature.xml $PTH/cscfeature.xml.bak
 else
 echo -e "-- Backup Already Exists --\n\n"
-#cp $PTH/cscfeature.xml.bak $PTH/cscfeature.xml
 fi
 
 echo -e "-- Downloading OMC Decoder --\n\n"
@@ -50,4 +49,5 @@ echo -e "-- Done :) --\n\n"
 
 else
 
-echo -e "-- File is Already Decrypted --"
+echo -e "-- File is Already Decrypted :) --"
+##
