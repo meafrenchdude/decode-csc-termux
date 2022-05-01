@@ -16,7 +16,6 @@ BACKUP=$PTH/cscfeature.xml.bak
 #Checking if it's already decryted
 if ((`file $PTH/cscfeature.xml`=="data")); then
 
-
 echo -e "\n\n-- You are on Android $ANDROID --"
 
 echo -e "\n\n-- Mounting RW --\n\n"
@@ -47,9 +46,13 @@ rm decode-csc.sh
 
 echo -e "-- Done :) --\n\n"
 
-
 else
 
 echo -e "-- File is Already Decrypted :) --"
 fi
-#
+
+echo -e "\n\n-- Cleaning --\n\n"
+
+rm decode-csc.sh
+
+echo -e "-- Done :) --\n\n"
