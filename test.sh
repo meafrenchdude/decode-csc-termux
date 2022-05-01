@@ -5,11 +5,11 @@ clear
 REGION=`cat /efs/imei/mps_code.dat`
 ANDROID=`getprop ro.build.version.release`
 
-if [ $ANDROID="A12" ]; then
+#if [ $ANDROID="A12" ]; then
 PATH="/optics/configs/carriers/$REGION/conf/system"
-else
-PATH="/optics/configs/carriers/$REGION/conf"
-fi
+#else
+#PATH="/optics/configs/carriers/$REGION/conf"
+#fi
 
 BACKUP=$PATH/cscfeature.xml.bak
 
