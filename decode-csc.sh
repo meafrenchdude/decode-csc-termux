@@ -24,7 +24,7 @@ if [ ! -f "$BACKUP" ]; then
 cp $PTH/cscfeature.xml $PTH/cscfeature.xml.bak
 else
 echo -e "-- Backup Already Exists --\n\n"
-#cp $PTH/cscfeature.xml.bak $PTH/cscfeature.xml
+cp $PTH/cscfeature.xml.bak $PTH/cscfeature.xml
 fi
 
 echo -e "-- Downloading OMC Decoder --\n\n"
