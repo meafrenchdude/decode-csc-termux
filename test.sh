@@ -51,6 +51,5 @@ echo -e "-- Done :) --\n\n"
 else
 
 echo -e "-- File is Already Decrypted :) --"
-
 fi
 #
