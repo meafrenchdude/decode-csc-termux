@@ -5,13 +5,16 @@ clear
 REGION=`cat /efs/imei/mps_code.dat`
 ANDROID=`getprop ro.build.version.release`
 
-if (($ANDROID==12)); then
+if [ $ANDROID -eq 12 ]; then
 PTH="/optics/configs/carriers/$REGION/conf/system"
 else
 PTH="/optics/configs/carriers/$REGION/conf"
 fi
 
 BACKUP=$PTH/cscfeature.xml.bak
+
+#Checking if it's already decryted
+if [ "`file $PTH/cscfeature.xml`" == "$PTH/cscfeature.xml: data" ]; then
 
 echo -e "\n\n-- You are on Android $ANDROID --"
 
@@ -24,7 +27,6 @@ if [ ! -f "$BACKUP" ]; then
 cp $PTH/cscfeature.xml $PTH/cscfeature.xml.bak
 else
 echo -e "-- Backup Already Exists --\n\n"
-#cp $PTH/cscfeature.xml.bak $PTH/cscfeature.xml
 fi
 
 echo -e "-- Downloading OMC Decoder --\n\n"
@@ -43,3 +45,15 @@ rm cscdecoder-aarch64
 rm decode-csc.sh
 
 echo -e "-- Done :) --\n\n"
+
+else
+
+echo -e "-- File is Already Decrypted --"
+
+echo -e "\n\n-- Cleaning --\n\n"
+
+rm decode-csc.sh
+
+echo -e "-- Done :) --\n\n"
+
+fi
