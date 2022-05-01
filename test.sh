@@ -5,7 +5,7 @@ clear
 REGION=`cat /efs/imei/mps_code.dat`
 ANDROID=`getprop ro.build.version.release`
 
-if (($ANDROID==12)); then
+if [ $ANDROID -eq 12 ]; then
 PTH="/optics/configs/carriers/$REGION/conf/system"
 else
 PTH="/optics/configs/carriers/$REGION/conf"
@@ -15,7 +15,7 @@ BACKUP=$PTH/cscfeature.xml.bak
 TYPE=`file $PTH/cscfeature.xml`
 
 #Checking if it's already decryted
-if (($TYPE=="cscfeature.xml: data")); then
+if [ $TYPE=="cscfeature.xml: data" ]; then
 
 echo -e "\n\n-- You are on Android $ANDROID --"
 
