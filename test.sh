@@ -12,9 +12,10 @@ PTH="/optics/configs/carriers/$REGION/conf"
 fi
 
 BACKUP=$PTH/cscfeature.xml.bak
+TYPE=`file $PTH/cscfeature.xml`
 
 #Checking if it's already decryted
-if (("`file $PTH/cscfeature.xml`"=="data")); then
+if (($TYPE=="data")); then
 
 echo -e "\n\n-- You are on Android $ANDROID --"
 
