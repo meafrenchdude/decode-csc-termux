@@ -14,7 +14,7 @@ fi
 BACKUP=$PTH/cscfeature.xml.bak
 
 #Checking if it's already decryted
-if ((`file $PTH/cscfeature.xml`=="data")); then
+if (("`file $PTH/cscfeature.xml`"=="data")); then
 
 echo -e "\n\n-- You are on Android $ANDROID --"
 
