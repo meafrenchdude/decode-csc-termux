@@ -59,10 +59,10 @@ rm decode-csc.sh
 
 fi
 
+echo -e "\n\n-- Done :) --\n\n"
+
 else
 
-echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --"
+echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --\n\n"
 
 fi
-
-echo -e "\n\n-- Done :) --\n\n"
