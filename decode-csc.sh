@@ -23,22 +23,22 @@ if [ -d /optics/configs/carriers/$region ] && [ -f $pth/cscfeature.xml ]; then
 #Checking if it's already decryted
 if [ "`file $pth/cscfeature.xml`" == "$pth/cscfeature.xml: data" ]; then
 
-echo -e "\n\n-- Mounting RW --\n\n"
+echo -e "\n\n-- Mounting RW --"
 
 mount -o rw,remount /optics
 
-echo -e "-- Making a Backup of cscfeature.xml --\n\n"
+echo -e "\n\n-- Making a Backup of cscfeature.xml --"
 if [ ! -f "$backup" ]; then
 cp $pth/cscfeature.xml $pth/cscfeature.xml.bak
 else
-echo -e "-- Backup Already Exists --\n\n"
+echo -e "\n\n-- Backup Already Exists --"
 fi
 
-echo -e "-- Downloading OMC Decoder --\n\n"
+echo -e "\n\n-- Downloading OMC Decoder --"
 
 curl --no-progress-meter -Lo cscdecoder-aarch64 https://github.com/soulr344/OMCDecoder/releases/download/v1.0/cscdecoder-aarch64 && chmod +x cscdecoder-aarch64
 
-echo -e "-- Decrypting --"
+echo -e "\n\n-- Decrypting --"
 
 ./cscdecoder-aarch64 -i $pth/cscfeature.xml
 chmod 644 $pth/cscfeature.xml
@@ -50,11 +50,11 @@ echo -e "\n\n-- File is Already Decrypted --"
 
 fi
 
-echo -e "\n\n-- Done :) --\n\n"
+echo -e "\n\n-- Done :) --"
 
 else
 
-echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --\n\n"
+echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --"
 
 fi
 
