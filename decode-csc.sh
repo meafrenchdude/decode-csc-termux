@@ -13,12 +13,15 @@ fi
 
 backup=$pth/cscfeature.xml.bak
 
-#Checking if it's already decryted
-if [ "`file $pth/cscfeature.xml`" == "$pth/cscfeature.xml: data" ]; then
-
 echo -e "\n\n-- You are on Android $android --"
 
 echo -e "\n\n-- Your Region is $region --"
+
+#checking if the files exist
+if [ -d /optics/configs/carriers/$region ] && [ -f $pth/cscfeature.xml ]; then
+
+#Checking if it's already decryted
+if [ "`file $pth/cscfeature.xml`" == "$pth/cscfeature.xml: data" ]; then
 
 echo -e "\n\n-- Mounting RW --\n\n"
 
@@ -46,8 +49,6 @@ echo -e "\n\n-- Cleaning --\n\n"
 rm cscdecoder-aarch64
 rm decode-csc.sh
 
-echo -e "-- Done :) --\n\n"
-
 else
 
 echo -e "\n\n-- File is Already Decrypted --"
@@ -56,6 +57,12 @@ echo -e "\n\n-- Cleaning --\n\n"
 
 rm decode-csc.sh
 
-echo -e "-- Done :) --\n\n"
+fi
+
+else
+
+echo -e "\n\n-- Cant Find Required Files at /optics/configs/carriers/$region --"
 
 fi
+
+echo -e "-- Done :) --\n\n"
