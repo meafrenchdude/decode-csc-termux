@@ -65,4 +65,4 @@ echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --
 
 fi
 
-echo -e "-- Done :) --\n\n"
+echo -e "\n\n-- Done :) --\n\n"
