@@ -2,31 +2,31 @@
 
 clear
 
-REGION=`cat /efs/imei/mps_code.dat`
-ANDROID=`getprop ro.build.version.release`
+region=`cat /efs/imei/mps_code.dat`
+android=`getprop ro.build.version.release`
 
-if [ $ANDROID -eq 12 ]; then
-PTH="/optics/configs/carriers/$REGION/conf/system"
+if [ $android -eq 12 ]; then
+pth="/optics/configs/carriers/$region/conf/system"
 else
-PTH="/optics/configs/carriers/$REGION/conf"
+pth="/optics/configs/carriers/$region/conf"
 fi
 
-BACKUP=$PTH/cscfeature.xml.bak
+backup=$pth/cscfeature.xml.bak
 
 #Checking if it's already decryted
-if [ "`file $PTH/cscfeature.xml`" == "$PTH/cscfeature.xml: data" ]; then
+if [ "`file $pth/cscfeature.xml`" == "$pth/cscfeature.xml: data" ]; then
 
-echo -e "\n\n-- You are on Android $ANDROID --"
+echo -e "\n\n-- You are on Android $android --"
 
-echo -e "\n\n-- Your Region is $REGION --"
+echo -e "\n\n-- Your Region is $region --"
 
 echo -e "\n\n-- Mounting RW --\n\n"
 
 mount -o rw,remount /optics
 
 echo -e "-- Making a Backup of cscfeature.xml --\n\n"
-if [ ! -f "$BACKUP" ]; then
-cp $PTH/cscfeature.xml $PTH/cscfeature.xml.bak
+if [ ! -f "$backup" ]; then
+cp $pth/cscfeature.xml $pth/cscfeature.xml.bak
 else
 echo -e "-- Backup Already Exists --\n\n"
 fi
