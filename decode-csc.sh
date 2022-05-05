@@ -37,9 +37,9 @@ curl --no-progress-meter -Lo cscdecoder-aarch64 https://github.com/soulr344/OMCD
 
 echo -e "-- Decrypting --"
 
-./cscdecoder-aarch64 -i $PTH/cscfeature.xml
-chmod 644 $PTH/cscfeature.xml
-chmod 644 $PTH/cscfeature.xml.bak
+./cscdecoder-aarch64 -i $pth/cscfeature.xml
+chmod 644 $pth/cscfeature.xml
+chmod 644 $pth/cscfeature.xml.bak
 
 echo -e "\n\n-- Cleaning --\n\n"
 
