@@ -18,6 +18,8 @@ if [ "`file $PTH/cscfeature.xml`" == "$PTH/cscfeature.xml: data" ]; then
 
 echo -e "\n\n-- You are on Android $ANDROID --"
 
+echo -e "\n\n-- Your Region is $REGION --"
+
 echo -e "\n\n-- Mounting RW --\n\n"
 
 mount -o rw,remount /optics
