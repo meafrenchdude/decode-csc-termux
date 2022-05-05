@@ -50,11 +50,6 @@ echo -e "\n\n-- File is Already Decrypted --"
 
 fi
 
-echo -e "\n\n-- Cleaning --\n\n"
-
-rm cscdecoder-aarch64 2> /dev/null
-rm decode-csc.sh 2> /dev/null
-
 echo -e "\n\n-- Done :) --\n\n"
 
 else
@@ -62,3 +57,9 @@ else
 echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --\n\n"
 
 fi
+
+echo -e "\n\n-- Cleaning --\n\n"
+
+rm cscdecoder-aarch64 2> /dev/null
+rm decode-csc.sh 2> /dev/null
+
