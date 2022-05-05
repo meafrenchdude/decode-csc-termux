@@ -61,7 +61,7 @@ fi
 
 else
 
-echo -e "\n\n-- Cant Find Required Files at /optics/configs/carriers/$region --"
+echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --"
 
 fi
 
