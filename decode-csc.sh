@@ -42,12 +42,12 @@ echo -e "\n\n-- Decrypting --"
 chmod 644 $pth/cscfeature.xml
 chmod 644 $pth/cscfeature.xml.bak
 
+echo -e "\n\n-- Done :) --"
+
 else
 echo -e "\n\n-- File is Already Decrypted --"
 
 fi
-
-echo -e "\n\n-- Done :) --"
 
 else
 echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --"
