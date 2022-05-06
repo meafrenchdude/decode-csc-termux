@@ -50,7 +50,7 @@ echo -e "\n\n-- File is Already Decrypted --"
 fi
 
 else
-echo -e "\n\n-- Can't Find Required Files at /optics/configs/carriers/$region --"
+echo -e "\n\n-- Can't Find The Required Files at /optics/configs/carriers/$region --"
 
 fi
 
