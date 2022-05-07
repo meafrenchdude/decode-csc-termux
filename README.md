@@ -10,3 +10,5 @@ One liner:
 ```
 cd ~ && pkg install tsu && curl -so decode-csc.sh https://raw.githubusercontent.com/fredinj/decode-csc-termux/main/decode-csc.sh && chmod +x decode-csc.sh && sudo bash decode-csc.sh
 ```
+
+*\*Only works with devices with dynamic partitions*
