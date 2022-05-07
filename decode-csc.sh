@@ -27,7 +27,7 @@ echo -e "\n\n-- Mounting RW --"
 mount -o rw,remount /optics
 
 echo -e "\n\n-- Making a Backup of cscfeature.xml --"
-#Checking if a bakcup exists
+#Checking if a backup exists
 if [ ! -f "$backup" ]; then
 cp $pth/cscfeature.xml $pth/cscfeature.xml.bak
 else
