@@ -7,9 +7,9 @@ android=`getprop ro.build.version.release`
 
 #Checking android version. Path is different in A12
 if [ $android -eq 12 ]; then
-pth="/optics/configs/carriers/$region/conf/system"
+path="/optics/configs/carriers/$region/conf/system"
 else
-pth="/optics/configs/carriers/$region/conf"
+path="/optics/configs/carriers/$region/conf"
 fi
 
 backup=$path/cscfeature.xml.bak
