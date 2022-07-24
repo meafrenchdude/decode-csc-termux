@@ -6,7 +6,7 @@ region=`cat /efs/imei/mps_code.dat`
 android=`getprop ro.build.version.release`
 
 #Checking android version. Path is different in A12
-if [ $android -eq 12 ]; then
+if [ $android -ge 12 ]; then
 path="/optics/configs/carriers/$region/conf/system"
 else
 path="/optics/configs/carriers/$region/conf"
