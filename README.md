@@ -1,6 +1,6 @@
 # Decode Samsung's cscfeature.xml Using Termux
 
-Got bored of typing it in everytime so...
+Got bored of typing it in everytime
 
 This script uses [OMC Decoder](https://github.com/soulr344/OMCDecoder) from [Soul Reaper](https://github.com/soulr344)
 
