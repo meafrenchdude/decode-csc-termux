@@ -7,9 +7,9 @@ android=`getprop ro.build.version.release`
 
 #Checking android version. Path is different in A12
 if [ $android -ge 12 ]; then
-path="/optics/configs/carriers/$region/conf/system"
+path="/optics/configs/carriers/single/$region/conf/system"
 else
-path="/optics/configs/carriers/$region/conf"
+path="/optics/configs/carriers/single/$region/conf"
 fi
 
 backup=$path/cscfeature.xml.bak
@@ -18,7 +18,7 @@ echo -e "\n\n-- You are on Android $android --"
 echo -e "\n\n-- Your Region is $region --"
 
 #Checking if the files exist
-if [ -d /optics/configs/carriers/$region ] && [ -f $path/cscfeature.xml ]; then
+if [ -d /optics/configs/carriers/single/$region ] && [ -f $path/cscfeature.xml ]; then
 
 #Checking if it's already decryted
 if [ "`file $path/cscfeature.xml`" == "$path/cscfeature.xml: data" ]; then
