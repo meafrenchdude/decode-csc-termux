@@ -8,7 +8,7 @@ One liner:
 
 
 ```
-cd ~ && pkg install tsu && curl -so decode-csc.sh https://raw.githubusercontent.com/fredinj/decode-csc-termux/main/decode-csc.sh && chmod +x decode-csc.sh && sudo bash decode-csc.sh
+cd ~ && pkg install tsu && curl -so decode-csc.sh https://raw.githubusercontent.com/thejeancarton/decode-csc-termux/main/decode-csc.sh && chmod +x decode-csc.sh && sudo bash decode-csc.sh
 ```
 
 *\*Only tested with M21 and M31, paths might be different in other devices*
