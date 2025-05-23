@@ -2,6 +2,8 @@
 
 Got bored of typing it in everytime
 
+Edited by A French Dude for regions in the "single" directory
+
 This script uses [OMC Decoder](https://github.com/soulr344/OMCDecoder) from [Soul Reaper](https://github.com/soulr344)
 
 One liner:
